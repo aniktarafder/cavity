@@ -26,7 +26,7 @@
 
 !!! input initial data
         Re = 1000.0d0
-        dt = 1e-4
+        dt = 1e-5
         dx = 1.0d0/float(N-1)
         dy = 1.0d0/float(M-1)
         eps = 1e-5
@@ -55,6 +55,7 @@
                 call calpsi(N,M,dx,dy,uc,vc,psi)
                 k = k+1
                 call output(N,M,X,Y,uc,vc,psi,pc,k)
+				Write (*,*)  'iteration=', itc
             endif
 
         enddo
